@@ -83,7 +83,7 @@
                 </form>
                 
                 <div class="form-footer">
-                    <p>Já possui conta? <a href="login.html" class="login-link">Fazer login</a></p>
+                    <p>Já possui conta? <a href="index.php" class="login-link">Fazer login</a></p>
                 </div>
             </div>
         </div>
