@@ -1,4 +1,4 @@
-/* Reset e configurações base empresariais */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,55 +6,40 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: #000;
   min-height: 100vh;
-  overflow: hidden;
 }
 
-/* Container principal split-screen */
-.login-container {
+/* Container principal login */
+.container-login {
   display: flex;
   min-height: 100vh;
 }
 
-/* Seção de branding - lado esquerdo */
-.brand-section {
+/* Lado esquerdo - marca */
+.secao-marca {
   flex: 1;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px;
-  position: relative;
-  overflow: hidden;
-}
-
-.brand-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.brand-content {
-  max-width: 500px;
   color: white;
-  z-index: 1;
 }
 
-.logo {
+.conteudo-marca {
+  max-width: 500px;
+}
+
+.logotipo {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 48px;
 }
 
-.logo-icon {
+.icone-logo {
   width: 48px;
   height: 48px;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -62,7 +47,7 @@ body {
   position: relative;
 }
 
-.logo-icon::after {
+.icone-logo::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -74,46 +59,40 @@ body {
   border-radius: 4px;
 }
 
-.logo h1 {
+.logotipo h1 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   letter-spacing: 2px;
-  color: #f8fafc;
 }
 
-.brand-text h2 {
+.texto-marca h2 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.brand-text p {
+.texto-marca p {
   font-size: 18px;
   line-height: 1.6;
   color: #94a3b8;
   margin-bottom: 48px;
 }
 
-.features {
+.recursos {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.feature-item {
+.item-recurso {
   display: flex;
   align-items: center;
   gap: 16px;
   font-size: 16px;
-  color: #e2e8f0;
 }
 
-.feature-icon {
+.icone-recurso {
   font-size: 20px;
   width: 40px;
   height: 40px;
@@ -125,8 +104,8 @@ body {
   justify-content: center;
 }
 
-/* Seção do formulário - lado direito */
-.form-section {
+/* Lado direito - formulário */
+.secao-formulario {
   flex: 1;
   background: #ffffff;
   display: flex;
@@ -135,102 +114,93 @@ body {
   padding: 60px;
 }
 
-.form-container {
+.container-formulario {
   width: 100%;
   max-width: 400px;
 }
 
-.form-header {
+.cabecalho-formulario {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.form-header h2 {
+.cabecalho-formulario h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: bold;
   color: #0f172a;
   margin-bottom: 12px;
 }
 
-.form-header p {
+.cabecalho-formulario p {
   font-size: 16px;
   color: #64748b;
 }
 
-.login-form {
+.formulario-login {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.input-group {
+.grupo-input {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.input-group label {
+.grupo-input label {
   font-size: 14px;
   font-weight: 600;
   color: #374151;
-  letter-spacing: 0.025em;
 }
 
-.input-group input {
+.grupo-input input {
   padding: 16px;
   border: 2px solid #e5e7eb;
   border-radius: 8px;
   font-size: 16px;
-  background: #ffffff;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s;
 }
 
-.input-group input:focus {
+.grupo-input input:focus {
   outline: none;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.input-group input::placeholder {
-  color: #9ca3af;
-}
-
-.form-options {
+.opcoes-formulario {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 8px 0;
 }
 
-.checkbox-container {
+.container-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
   font-size: 14px;
   color: #6b7280;
-  position: relative;
 }
 
-.checkbox-container input {
+.container-checkbox input {
   width: 16px;
   height: 16px;
   margin: 0;
 }
 
-.forgot-link {
+.link-esqueci {
   color: #3b82f6;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
 }
 
-.forgot-link:hover {
+.link-esqueci:hover {
   color: #1d4ed8;
   text-decoration: underline;
 }
 
-.btn-login {
+.botao-entrar {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
   color: white;
   padding: 16px;
@@ -239,81 +209,79 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.025em;
+  transition: all 0.2s;
 }
 
-.btn-login:hover {
+.botao-entrar:hover {
   background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
   transform: translateY(-1px);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
 }
 
-.form-footer {
+.rodape-formulario {
   text-align: center;
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid #e5e7eb;
 }
 
-.form-footer p {
+.rodape-formulario p {
   font-size: 14px;
   color: #6b7280;
 }
 
-.register-link {
+.link-cadastro {
   color: #3b82f6;
   text-decoration: none;
   font-weight: 600;
 }
 
-.register-link:hover {
+.link-cadastro:hover {
   color: #1d4ed8;
   text-decoration: underline;
 }
 
-/* Responsividade empresarial */
+/* Responsivo */
 @media (max-width: 1024px) {
-  .login-container {
+  .container-login {
     flex-direction: column;
   }
 
-  .brand-section {
+  .secao-marca {
     min-height: 40vh;
     padding: 40px 20px;
   }
 
-  .brand-text h2 {
+  .texto-marca h2 {
     font-size: 28px;
   }
 
-  .form-section {
+  .secao-formulario {
     padding: 40px 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .brand-section {
+  .secao-marca {
     padding: 30px 20px;
   }
 
-  .brand-text h2 {
+  .texto-marca h2 {
     font-size: 24px;
   }
 
-  .brand-text p {
+  .texto-marca p {
     font-size: 16px;
   }
 
-  .form-section {
+  .secao-formulario {
     padding: 30px 20px;
   }
 
-  .form-header h2 {
+  .cabecalho-formulario h2 {
     font-size: 28px;
   }
 
-  .form-options {
+  .opcoes-formulario {
     flex-direction: column;
     gap: 16px;
     align-items: flex-start;
